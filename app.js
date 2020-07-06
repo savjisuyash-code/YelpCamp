@@ -23,8 +23,10 @@ var commentRoutes        = require("./routes/comments"),
 
 //seedDB();                                                   //This call will first remove the existing elements in the DB then add 3 more
 
+console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL);
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb+srv://savjisuyash:dungenmaster@cluster0.jwapg.mongodb.net/Cluster0?retryWrites=true&w=majority");
+//mongoose.connect("mongodb+srv://savjisuyash:dungenmaster@cluster0.jwapg.mongodb.net/Cluster0?retryWrites=true&w=majority");
 
 app.use(bodyParser.urlencoded({extended : true}));
 
