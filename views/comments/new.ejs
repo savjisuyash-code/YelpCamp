@@ -1,0 +1,24 @@
+<%- include("../partials/header") %>
+
+    <div class = "container">
+        <h1 style = "text-align : center">ADD A NEW COMMENT TO <%=campground.name.toUpperCase() %></h1>
+        <div style = "width:30%; margin:25px auto">
+            <form action  = "/campgrounds/<%= campground._id %>/comments" method = "POST">
+              
+              <div class="form-group">
+                <label>text</label>
+                <input type="text" class="form-control" name = "comment[text]" aria-describedby="emailHelp" placeholder="text">
+              </div>
+
+              <button type="submit" class="btn btn-primary" style = "margin: 10px auto">Submit</button>
+            </form>
+            <a href = "/campgrounds">Go back</a>
+        
+    </div>
+
+
+
+
+
+
+<%- include("../partials/footer") %>
